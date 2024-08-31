@@ -1,8 +1,9 @@
 import { NavItem, NavLink } from "react-bootstrap"
 import { SidebarLinks } from "../data/SidebarLinks"
+import "../assets/css/SidebarStyle.css"
 function Sidebar() {
     return (
-        <div>
+        <div className="sidebar">
             {
                 SidebarLinks.map((linkItem) => {
                     console.log(linkItem);

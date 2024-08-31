@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import NavComponent from "../components/navbar";
 import RentalItem from "../components/RentalItem";
 import Sidebar from "../components/Sidebar";
+import "bootstrap/dist/css/bootstrap.min.css"
 
 function Home() {
     const [itemList, setItemList] = useState([])
@@ -23,12 +24,17 @@ function Home() {
 
 
     return (
-        <>
-            <NavComponent />
-            <Sidebar/>
-            {itemList.map(book => (<RentalItem key={book.itemId} author={book.author} title={book.title} rate={book.rate} availableItems={book.availableItems} />))}
-
-        </>
+        <div className="container">
+            <div className="row">
+                <NavComponent />
+            </div>
+            <div className="row">
+                <Sidebar className="col" />
+                <div className="col">
+                    {itemList.map(book => (<RentalItem key={book.itemId} author={book.author} title={book.title} rate={book.rate} availableItems={book.availableItems} />))}
+                </div>
+            </div>
+        </div>
     )
 }
 export default Home
