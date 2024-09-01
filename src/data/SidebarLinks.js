@@ -9,5 +9,10 @@ export const SidebarLinks = [
         id: "bookEntryLink",
         link: "/book/entry",
         name: "Book Entry",
-    }
+    },
+    {
+        id: "rentalEntryLink",
+        link: "/rentalItem/entry",
+        name: "Rental Item Entry",
+    },
 ];

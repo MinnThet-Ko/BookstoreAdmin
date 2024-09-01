@@ -22,11 +22,6 @@ function BookForm() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(book);
-        let formData = new FormData();
-        formData.append("isbnNumber", book.isbnNumber);
-        formData.append("author", book.author);
-        formData.append("title", book.title);
         axios({
             method: "post",
             url: "http://localhost:8080/book/saveBook",
